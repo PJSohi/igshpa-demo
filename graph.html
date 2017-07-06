@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>IGSHPA Canada</title>
+
+    <!-- Bootstrap Default CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssmap-canada/cssmap-canada.css" media="screen" />
+      
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+          
+        var vOne = parseInt(document.getElementById("v1").value);
+        vOne = (vOne)? vOne : 5000;
+          
+        var vTwo = parseInt(document.getElementById("v2").value);
+        vTwo = (vTwo)? vTwo : 23.3;
+       
+        var vThree = parseInt(document.getElementById("v3").value);
+        vThree = (vThree)? vThree : 24000;
+       
+        var vFour = parseInt(document.getElementById("v4").value);
+        vFour = (vFour)? vFour : 4.5;
+
+        var chartDiv = document.getElementById('chart_div');
+
+        var data = google.visualization.arrayToDataTable([
+          ['System', 'Costs', 'Carbon Footprint'],
+          ['Current', vOne, vTwo],
+          ['Geothermal Heat Pump', vThree, vFour],
+        ]);
+
+        var materialOptions = {
+          chart: {
+            title: 'Test Graph',
+            subtitle: 'Variable 1 on the left, Variable 2 on the right'
+          },
+          series: {
+            0: { axis: 'costs' },
+            1: { axis: 'carbon' } 
+          },
+          axes: {
+            y: {
+              costs: {label: 'Canadian Dollars'}, // Left y-axis.
+              carbon: {side: 'right', label: 'Per Year'} // Right y-axis.
+            }
+          }
+        };
+
+        function drawMaterialChart() {
+          var materialChart = new google.charts.Bar(chartDiv);
+          materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+        }
+        drawMaterialChart();
+    };
+    </script>
+  </head>
+  <body>
+    
+    <div id="head">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                  <img alt="IGSHPA" src="img/igshpa-logo-white.png" height="30" style="margin-top:-6px"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.igshpa.ca/board-of-directors.html">Board of Directors</a></li>
+                    <li><a href="http://www.igshpa.ca/constitution.html">Constitution</a></li>
+                    <li><a href="http://www.igshpa.ca/mission.html">Mission</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="http://www.igshpa.ca/contact.html">Contact</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.igshpa.ca/apply.html">Apply</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Training <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.igshpa.ca/accredited-installer-course.html">Accredited Installer Course</a></li>
+                    <li><a href="http://www.igshpa.ca/accredited-drillers-course.html">Accredited Driller's Course</a></li>
+                    <li><a href="http://www.igshpa.ca/certified-geoexchange-designer.html">Certified GeoExchange Designer</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://www.igshpa.ca/resources.html">Resources</a></li>
+                <li><a href="http://www.igshpa.ca/news">News</a></li>
+                <li><a href="#"><b>Industry</b></a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    
+    
+        <div class="container wow fadeInDown" id="head-caption">
+            <h1>International Ground Source Heat Pump Association of <b>Canada</b></h1><br>
+            <a href="#feature-one" class="btn btn-primary">Learn More</a>
+        </div>
+    
+    </div>
+    
+    <section id="feature-one">
+      <div class="container">
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h6>See the change</h6>
+                    <h2>Calculate Your Savings</h2>
+                    
+                    <form>
+                      Please enter your current values for the following: <br>
+                      Varibale 1:<br>
+                      <input type="number" name="variable1" id="v1"><br>
+                      Variable 2:<br>
+                      <input type="number" name="variable2" id="v2">
+                      <br>
+                      Variable 1 Post:<br>
+                      <input type="number" name="variable3" id="v3"><br>
+                      Variable 2 Post:<br>
+                      <input type="number" name="variable4" id="v4"><br><br>
+                      <!-- Button trigger modal -->
+                      <input type="button" class="btn btn-success btn-outline" data-toggle="modal" data-target="#myModal" value="Submit" onClick="drawStuff()">
+                    </form>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Sample</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div id="chart_div" class="chart"></div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>            
+            </div>
+          </div>        
+        </div>
+    </section>
+         
+    <div id="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+              <a class="twitter-timeline" 
+                 href="https://twitter.com/renewablesca"
+                 data-width="100%"
+                 data-height="200"
+                 data-theme="dark"
+                 data-chrome="noheader nofooter noscrollbar transparent">
+                 Tweets by renewablesca
+              </a> 
+            &copy; 2017 IGSHPA Canada <br>
+              Coded by <a href="">Prabhjot Sohi</a><br><br>
+              <a href="#head">Back to Top</a> 
+            </div>
+            <div class="col-md-2">
+                <ul class="list-unstyled">
+                <h6>Navigation</h6>
+                    <li><a href="#head">Home</a></li>
+                    <li><a href="#feature-three">Membership</a></li>
+                    <li><a href="http://www.igshpa.ca/resources.html">Resources</a></li>
+                    <li><a href="http://www.igshpa.ca/news">News</a></li>
+                    <li><a href="">Industry Site</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>About</h6>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.igshpa.ca/board-of-directors.html">Board of Directors</a></li>
+                    <li><a href="http://www.igshpa.ca/constitution.html">Constitution</a></li>
+                    <li><a href="http://www.igshpa.ca/mission.html">Mission</a></li>
+                    <li><a href="http://www.igshpa.ca/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Training</h6>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.igshpa.ca/accredited-installer-course.html">Accredited Installer</a></li>
+                    <li><a href="http://www.igshpa.ca/accredited-drillers-course.html">Accredited Driller</a></li>
+                    <li><a href="http://www.igshpa.ca/certified-geoexchange-designer.html">CGD</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+      
+    <script type="text/javascript">
+        $('#myModal').on('show.bs.modal', function(e) {
+
+        setTimeout(
+        function() 
+        {
+          drawStuff();
+        }, 500);
+
+    })
+    </script>
+      
+  </body>
+</html>
