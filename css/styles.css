@@ -1,0 +1,368 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #333;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing; 0.1rem;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 150%;
+}
+img {
+    max-width: 100%;
+}
+
+/*default navbar*/
+.navbar-default {
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                0 3px 1px -2px rgba(0,0,0,.2), 
+                0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+/*transparent navbar*/
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+.navbar-transparent .navbar-brand {
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-transparent .navbar-nav>li>a {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    &:hover{
+        background-color: inherit;
+        color: #FFF
+    }
+}
+.navbar-transparent .navbar-nav > li > a:hover, 
+.navbar-transparent .navbar-nav > li > a:focus {
+    background-color: inherit;
+    color: rgba(255,255,255,.8);
+}
+
+/*hero*/
+
+#hero {
+    background: url('../img/bg2.jpg');
+    background-size: cover;
+    color: white;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#hero-sm {
+    background: url('../img/bg2.jpg');
+    background-size: cover;
+    color: white;
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#hero-sm h2 {
+    color: rgba(255,255,255,.8);
+}
+
+#hero h2 {
+    color: rgba(255,255,255,.8);
+}
+
+#hero-caption p{
+    color: 
+}
+
+#hero-caption h1{
+    font-size: 5rem;
+}
+
+#hero-caption h1, h3 {
+    color: white;
+}
+
+.feature-content {
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.feature-content h3 {
+    color: #575757;
+    font-size: 1.75em;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+#explanation .feature-content h4,
+#loopConfig .feature-content h4,
+#savings .feature-content h4,
+#challenge .feature-content h4,
+#provinceName,
+.subhead{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #3db742;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+#intro .feature-content,
+#membership .feature-content,
+#tech .feature-content{
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.lihead {
+    color: #3db742;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.subheadred{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #c43a3a;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.feature-light {
+    background: #f7f7f7;
+}
+
+.feature-green {
+    background: linear-gradient(to right,#8bc34a 0,#388e3c 100%);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,.25);
+
+}
+
+.feature-green h3 {
+    color: white;
+}
+
+#loopConfig {
+    padding-bottom: 6rem;
+}
+
+#predata {
+    margin-bottom: -3rem;
+}
+
+.button-green {
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    margin: 6px 0 0;
+    display: inline-block;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+
+a {
+    color: #3db742;
+}
+
+.material-icons {
+    padding-right: 4px;
+}
+
+.material-icons, .icon-text {
+    vertical-align: middle;
+}
+
+/*FAQ Section*/
+
+.faqHeader {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #3db742;
+    display: inline-flex;
+    vertical-align: middle;
+    }
+
+.panel-heading [data-toggle="collapse"]:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e258"; /* "play" icon */
+    float: right;
+    color: #3db742;
+    font-size: 18px;
+    line-height: 22px;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #454444;
+}
+
+.panel-title a {
+    display: block;
+    padding: 20px 15px;
+    margin: -10px -15px;
+}
+
+.panel-default > .panel-heading {
+    background-color: transparent;
+}
+
+.panel, .panel-group .panel-heading+.panel-collapse>.panel-body{
+    border: none;
+}
+
+/*Cards*/
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: #fff;
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+/*  position: relative;*/
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #3db742;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+
+
+/*Pagination*/
+.pagination>li>a, 
+.pagination>li>span {
+    color: #6c6f73;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    background-color: #3db742;
+    border-color: #3db742;
+}
+
+/*Footer*/
+footer {
+    background: #263238;
+    color: white;
+    padding: 5rem 0;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: rgba(255,255,255,.7);
+}
+
+footer a:hover {
+    color: #3db742;
+}
+
+
+/* Media Queries */
+@media screen and ( min-width : 991px ){
+    
+    #hero-caption h1 {
+        color:white;
+        font-size: 6rem;
+    }
+    
+    #hero-caption p {
+        color:white;
+        font-size: 2rem;
+    }
+    
+    #hero-caption-sm h1 {
+        color:white;
+        font-size: 7rem;
+    }
+}
